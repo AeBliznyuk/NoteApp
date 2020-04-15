@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="Note.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="ProjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

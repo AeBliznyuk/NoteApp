@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace NoteApp
 {   
-    class Note
+    public class Note : ICloneable
     {
         private string _name = "Без названия";
         
-
         public string Name
         {
             get
@@ -27,12 +26,26 @@ namespace NoteApp
                 else _name = value;
             }
         }
+
         public Category Category { get; set; }
       
-
         public DateTime CreateDateTime { get; private set; }
+
         public DateTime ChangeDateTime { get; private set; }
 
+        public object Clone()
+        {
+            Note note = new Note();
+            note.Name = this.Name;
+            note.Category = this.Category;
+            note.CreateDateTime = this.CreateDateTime;
+            note.ChangeDateTime = this.ChangeDateTime;
+            return note;
+        }
     }
+
+
+
+    
 }
 
